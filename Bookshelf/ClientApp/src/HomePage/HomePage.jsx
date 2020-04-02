@@ -23,6 +23,7 @@ class HomePage extends React.Component {
                 <div className="container">
                     <h1>Hi {currentUser.firstName}!</h1>
                     <p>You're logged in with React & JWT to this book application!!</p>
+                    <p>Head over to the libary to see all the books</p>
                 </div>
             </div>
         );

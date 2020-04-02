@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+using System.Text.Json.Serialization;
 using Bookshelf.Core.Enums;
+using Newtonsoft.Json.Converters;
 
 namespace Bookshelf.Core.Domain.Entities
 {
@@ -13,7 +13,8 @@ namespace Bookshelf.Core.Domain.Entities
         public DateTime PubDate { get; set; }
         public string? Publisher { get; set; }
         public string Title { get; set; }
-        public Genre? Genre { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public Genre Genre { get; set; }
         public int AuthorId { get; set; }
         public AuthorModel Author { get; set; }
         public List<LoanModel> Loans { get; set; }

@@ -9,7 +9,6 @@ namespace Bookshelf.Core
     {
         protected override void Load(ContainerBuilder builder)
         {
-            //builder.RegisterType<RegisterUserUseCase>().As<IRegisterUserUseCase>().InstancePerLifetimeScope();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Bookshelf.Core.Domain.Entities
         public int Id { get; set; }
         public DateTime DateTimeOut { get; set; }
         public DateTime DateDue { get; set; }
-        public DateTime DateReturned { get; set; }
+        public DateTime? DateReturned { get; set; }
         public int UserId { get; set; }
         public UserModel Users { get; set; }
         public int BookId { get; set; }

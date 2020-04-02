@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Bookshelf.Core.Domain.Entities;
+using Bookshelf.Core.Enums;
 using Bookshelf.Infrastructure.Data;
 using Bookshelf.Infrastructure.Data.Entities;
 using Microsoft.AspNetCore.Cors;
@@ -30,17 +32,27 @@ namespace Bookshelf.Web.Controllers
         [Route("test")]
         public IActionResult Test()
         {
-            return Ok("Hello from libaryController");
+            return Ok("Hello from BooksController");
         }
 
         [HttpGet]
-        public IEnumerable<Book> GetBooks()
+        public IEnumerable<BookModel> GetBooks()
         {
-            var result = _context.Books.Include(x => x.Author).OrderByDescending(r => r.Id).ToList();
 
-            List<BookModel> books = _mapper.Map<List<Book>, List<BookModel>>(result);
-            books.Select(x => x.Genre.ToString());
-            return result;
+            var bookResult = _context.Books
+                .Include(b => b.Author)
+                .Include(b => b.Loans)
+                .OrderBy(r => r.Title).ToList();
+
+            List<BookModel> books = _mapper.Map<List<Book>, List<BookModel>>(bookResult);
+
+            books
+                .Where(b => 
+                b.Loans.Any() && 
+                !b.Loans.All(loan => loan.DateReturned.HasValue))
+                .Select(b => b.Loaned = true)
+                .ToList();
+            return books;
         }
 
         [HttpPost]
@@ -51,7 +63,9 @@ namespace Bookshelf.Web.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Add(bookModel);
+            var book = _mapper.Map<Book>(bookModel);
+
+            _context.Add(book);
             var save = await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetBook", new { id = bookModel.Id }, bookModel);

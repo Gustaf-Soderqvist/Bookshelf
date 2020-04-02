@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookshelf.Web", "Bookshelf.Web.csproj", "{3921B1DE-86AC-474D-900D-615CE1FC207A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookshelf.Web", "Bookshelf.Web.csproj", "{3921B1DE-86AC-474D-900D-615CE1FC207A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookshelf.Infrastructure", "..\Bookshelf.Infrastructure\Bookshelf.Infrastructure.csproj", "{9C8D819D-C76B-4357-9FB1-A389CCAED683}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookshelf.Infrastructure", "..\Bookshelf.Infrastructure\Bookshelf.Infrastructure.csproj", "{9C8D819D-C76B-4357-9FB1-A389CCAED683}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookshelf.Core", "..\Bookshelf.Core\Bookshelf.Core.csproj", "{89057AEA-4695-4601-8BDC-2D97D12782F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bookshelf.Core", "..\Bookshelf.Core\Bookshelf.Core.csproj", "{89057AEA-4695-4601-8BDC-2D97D12782F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BF06A079-E6DA-4FC3-922E-040187E21001}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -55,6 +55,21 @@ namespace Bookshelf.Infrastructure.Data
             {
                 Id = 3,
                 Name = "‎‎Andrzej Sapkowski"
+            },
+            new Author()
+            {
+                Id = 4,
+                Name = "‎‎Bea Uusma"
+            },
+            new Author()
+            {
+                Id = 5,
+                Name = "John Edward Williams"
+            },
+            new Author()
+            {
+                Id = 6,
+                Name = "Douglas Adams"
             }
 
         );
@@ -64,18 +79,18 @@ namespace Bookshelf.Infrastructure.Data
                 {
                     Id = 1,
                     CopyNumber = 1,
-                    PubDate = new DateTime(2001,01,01),
+                    PubDate = new DateTime(2001, 01, 01),
                     Publisher = "Old publisher",
                     Title = "Artemis Fowl",
                     Genre = Genre.Fantasy,
                     AuthorId = 1,
-                    
+
                 },
                 new Book()
                 {
                     Id = 2,
                     CopyNumber = 1,
-                    PubDate = new DateTime(2008,01,01),
+                    PubDate = new DateTime(2008, 01, 01),
                     Publisher = "illustrated ed",
                     Title = "Clean Code: A Handbook of Agile Software Craftsmanship",
                     Genre = Genre.Programming,
@@ -85,11 +100,41 @@ namespace Bookshelf.Infrastructure.Data
                 {
                     Id = 3,
                     CopyNumber = 1,
-                    PubDate = new DateTime(2008,01,01),
+                    PubDate = new DateTime(2008, 01, 01),
                     Publisher = "Little, Brown and Company",
                     Title = "The Last Wish",
                     Genre = Genre.Fantasy,
                     AuthorId = 3
+                },
+                new Book()
+                {
+                    Id = 4,
+                    CopyNumber = 1,
+                    PubDate = new DateTime(1965, 01, 01),
+                    Publisher = "Viking Press",
+                    Title = "Stoner",
+                    Genre = Genre.Novel,
+                    AuthorId = 5
+                },
+                new Book()
+                {
+                    Id = 5,
+                    CopyNumber = 1,
+                    PubDate = new DateTime(2008, 01, 01),
+                    Publisher = "Norstedts",
+                    Title = "Expeditionen: min kärlekshistoria",
+                    Genre = Genre.Novel,
+                    AuthorId = 4
+                },
+                new Book()
+                {
+                    Id = 6,
+                    CopyNumber = 1,
+                    PubDate = new DateTime(2009, 08, 14),
+                    Publisher = "Pan Books Ltd",
+                    Title = "The Hitchhiker's Guide to the Galaxy",
+                    Genre = Genre.Novel,
+                    AuthorId = 6
                 }
                 );
         }

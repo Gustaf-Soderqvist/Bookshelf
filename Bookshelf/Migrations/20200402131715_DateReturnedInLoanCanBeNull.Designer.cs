@@ -4,14 +4,16 @@ using Bookshelf.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Bookshelf.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200402131715_DateReturnedInLoanCanBeNull")]
+    partial class DateReturnedInLoanCanBeNull
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,21 +50,6 @@ namespace Bookshelf.Web.Migrations
                         {
                             Id = 3,
                             Name = "‎‎Andrzej Sapkowski"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "‎‎Bea Uusma"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "John Edward Williams"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Douglas Adams"
                         });
                 });
 
@@ -127,36 +114,6 @@ namespace Bookshelf.Web.Migrations
                             PubDate = new DateTime(2008, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Publisher = "Little, Brown and Company",
                             Title = "The Last Wish"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            AuthorId = 5,
-                            CopyNumber = 1,
-                            Genre = 25,
-                            PubDate = new DateTime(1965, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Publisher = "Viking Press",
-                            Title = "Stoner"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            AuthorId = 4,
-                            CopyNumber = 1,
-                            Genre = 25,
-                            PubDate = new DateTime(2008, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Publisher = "Norstedts",
-                            Title = "Expeditionen: min kärlekshistoria"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            AuthorId = 6,
-                            CopyNumber = 1,
-                            Genre = 25,
-                            PubDate = new DateTime(2009, 8, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Publisher = "Pan Books Ltd",
-                            Title = "The Hitchhiker's Guide to the Galaxy"
                         });
                 });
 

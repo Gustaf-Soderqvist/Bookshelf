@@ -13,5 +13,17 @@ namespace Bookshelf.Core.Domain.Entities
         public string Username { get; set; }
         public string Email { get; set; }
         public List<LoanModel> Loans { get; set; }
+        public string FullName
+        {
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }
+        }
+
+        public override string ToString()
+        {
+            return FullName;
+        }
     }
 }
