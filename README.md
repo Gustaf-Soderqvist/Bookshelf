@@ -46,6 +46,7 @@ http://localhost:1337
 * SwaggerUi
 * IoC https://autofac.org/
 * Mapping https://automapper.org/
+* Webpack 4.0 https://webpack.js.org/
 * Clean Architecture https://fullstackmark.com/post/18/building-aspnet-core-web-apis-with-clean-architecture?fbclid=IwAR3arYeTPwlwnzhmwgtbcA83XN1YuTCrKN6jqBuBXqIVO3DE255VIMnnJ-4
 * React authentication 
 https://jasonwatmore.com/post/2018/09/11/react-basic-http-authentication-tutorial-example
