@@ -43,7 +43,7 @@ http://localhost:1337
 * .NET Core 3.1 https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-1
 * Entity Framework Core https://docs.microsoft.com/en-us/ef/core/
 * React 16.8.6
-* SwaggerUi
+* SwaggerUi https://swagger.io/tools/swagger-ui/
 * IoC https://autofac.org/
 * Mapping https://automapper.org/
 * Webpack 4.0 https://webpack.js.org/
