@@ -1,6 +1,5 @@
 # Bookshelf
 
-
 A simple libary
 
 ## Getting Started
@@ -26,28 +25,17 @@ npm install
 ```
 
 In Visual Studio, you can use the Package Manager Console to apply pending migrations to the database:
-
-Run "Update-Database"
-Alternatively, you can apply pending migrations from a command prompt at your project directory:
-
 > dotnet ef database update
 
-
-* If you have problem with creating the DB. Change cs in appsettings.json to:
-connectionString="Server=(localdb)\mssqllocaldb;Database=Hermes;Trusted_Connection=True;" />
 ```
 
 - Start the application -
 ```
 dotnet run
 
-https://localhost:5001
-SwaggerUi
-or
-http://localhost:1337 - react
+https://localhost:5001 (SwaggerUi)
+http://localhost:1337 
 ```
-
-
 
 
 ## Built With
@@ -55,6 +43,7 @@ http://localhost:1337 - react
 * .NET Core 3.1 https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-1
 * Entity Framework Core https://docs.microsoft.com/en-us/ef/core/
 * React 16.8.6
+* SwaggerUi
 * IoC https://autofac.org/
 * Mapping https://automapper.org/
 * Clean Architecture https://fullstackmark.com/post/18/building-aspnet-core-web-apis-with-clean-architecture?fbclid=IwAR3arYeTPwlwnzhmwgtbcA83XN1YuTCrKN6jqBuBXqIVO3DE255VIMnnJ-4
