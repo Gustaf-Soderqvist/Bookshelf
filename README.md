@@ -25,6 +25,7 @@ npm install
 ```
 
 In Visual Studio, you can use the Package Manager Console to apply pending migrations to the database:
+Bookshelf.Infrastructure as project
 > dotnet ef database update
 
 ```
